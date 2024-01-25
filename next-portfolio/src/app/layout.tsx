@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
+import Provider from '../../components/provider';
 import "./globals.css";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 
 export const metadata: Metadata = {
   title: "MAX is PAUL",
@@ -14,9 +13,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html suppressHydrationWarning>
       <body>
+        <Provider>
           {children}
+        </Provider>
       </body>
     </html>
   );
