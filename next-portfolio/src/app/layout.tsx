@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Layout from "../../components/layout";
-
-
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 export const metadata: Metadata = {
   title: "MAX is PAUL",
@@ -15,10 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <Layout >
-      <body>{children}</body>
-      </Layout>
-    </>
+    <html>
+      <body>
+          {children}
+      </body>
+    </html>
   );
 }

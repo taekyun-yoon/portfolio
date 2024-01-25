@@ -5,9 +5,13 @@ export default function Layout({ children }:
     Readonly<{ children: React.ReactNode }>) {
 return (
     <>
-    <Header/>
-    <div>{children}</div>
-    <Footer/>
+        <section>
+            <Header/> 
+        </section>
+        <div>{children}</div>
+        <section>
+            <Footer/>
+        </section>
     </>
 );
 }
