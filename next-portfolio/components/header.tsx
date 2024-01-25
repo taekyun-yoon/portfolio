@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function header() {
     return (
         <>
@@ -10,9 +12,9 @@ export default function header() {
                 <span className="ml-3 text-xl">TAE's portfolio</span>
             </a>
             <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-                <a className="mr-5 hover:text-gray-900">Home</a>
-                <a className="mr-5 hover:text-gray-900">Projects</a>
-                <a className="mr-5 hover:text-gray-900">Contact</a>
+                <Link className="mr-5 hover:text-gray-900" href= "/">Home</Link>
+                <Link className="mr-5 hover:text-gray-900"href= "/project" >Project</Link>
+                <Link className="mr-5 hover:text-gray-900" href= "/contact">Contact</Link>
             </nav>
             </div>
         </header>
