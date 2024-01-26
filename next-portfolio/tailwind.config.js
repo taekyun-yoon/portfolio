@@ -2,8 +2,8 @@
 module.exports = {
   darkMode: 'class',
   content: [
-    './src/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
-    './components/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
     
 
     // Or if using `src` directory:
