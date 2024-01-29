@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { TOKEN, DATABASE_ID } from '../../../config';
 import ProjectItem from '../../../components/project/project-item';
 import { NotionDatabaseResponse, NotionPage } from '../../../src/types/notion-types';
+import Link from 'next/link';
 
 
 export default async function Projects() {
@@ -13,20 +14,24 @@ export default async function Projects() {
     if(projects != null){
         return (
             <Layout>
-            <div className="flex flex-col items-center justify-center min-h-screen px-3 mb-10">
+            <div className="relative">
                 <Head>
                 <title>TAE's portfolio</title>
                 <meta name="description" content="TAE's portfolio" />
                 <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <h1 className="text-4xl font-bold sm:text-6xl ">
+                <h3 className="text-2xl font-bold  absolute top-0 left-20 p-4 mb-4">
                 총 프로젝트 :
                 <span className="pl-4 text-blue-500">{projects.results.length}</span>
-                </h1>
+                </h3>
 
-                <div className="grid grid-cols-1 gap-8 p-12 m-4 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-8 p-20 m-4 md:grid-cols-2 mt-6">
                 {projects.results.map((aProject: NotionPage) => (
-                    <ProjectItem key={aProject.id} data={aProject} />
+                    <Link key={aProject.id} href={`/project/${aProject.id}`} legacyBehavior>
+                        <a>
+                        <ProjectItem data={aProject} />
+                        </a>
+                    </Link>
                 ))}
                 </div>
             </div>

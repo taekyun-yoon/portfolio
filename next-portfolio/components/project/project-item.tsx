@@ -42,12 +42,13 @@ export default function ProjectItem({ data }: {data : NotionPage}) {
     };
 
     return (
-        <div className="project-card">
+        <div className="project-card min-w-0 max-w-full">
+            
             <Image
             className="rounded-t-xl"
             src={imgSrc}
             alt="cover image"
-            width={100}
+            width={50}
             height={50}
             layout="responsive"
             objectFit="cover"
@@ -57,7 +58,7 @@ export default function ProjectItem({ data }: {data : NotionPage}) {
             <div className="p-4 flex flex-col">
                 <h1 className="text-lg font-bold mb-2">{title}</h1>
                 <p className="text-sm mb-2">{fullDescription}</p>
-                <h3 className="mt-4 text-xl">{role}</h3>
+                <h3 className="mt-4 mb-2">{role}</h3>
                 <a href={github}>깃허브 바로가기</a>
                 <p className="my-1 ">
                     작업기간 : {start} ~ {end} ({calculatedPeriod(start, end)}일)
