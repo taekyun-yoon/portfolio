@@ -4,6 +4,7 @@ module.exports = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './components/project/*.{js,ts,jsx,tsx}',
     
 
     // Or if using `src` directory:
