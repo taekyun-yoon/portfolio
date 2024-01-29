@@ -28,9 +28,7 @@ export default async function Projects() {
                 <div className="grid grid-cols-1 gap-8 p-20 m-4 md:grid-cols-2 mt-6">
                 {projects.results.map((aProject: NotionPage) => (
                     <Link key={aProject.id} href={`/project/${aProject.id}`} legacyBehavior>
-                        <a>
                         <ProjectItem data={aProject} />
-                        </a>
                     </Link>
                 ))}
                 </div>
@@ -65,7 +63,7 @@ export default async function Projects() {
         const projects: NotionDatabaseResponse = await response.json();
 
         // const projectNames = projects.results.map((aProject: any) =>(
-        //     aProject.properties.Project.title[0].plain_text
+            //     aProject.properties.Project.title[0].plain_text
         // ))
         // console.log(`projectNames : ${projectNames}`);
 
