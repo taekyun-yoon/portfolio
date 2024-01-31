@@ -16,7 +16,7 @@ export default async function Projects() {
             <Layout>
             <div className="relative">
                 <Head>
-                <title>TAE's portfolio</title>
+                <title>TAE&apos;s portfolio</title>
                 <meta name="description" content="TAE's portfolio" />
                 <link rel="icon" href="/favicon.ico" />
                 </Head>
